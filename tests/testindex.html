@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">	
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" /> <!--This should be the image dad drew of the skiier-->
+<title>Ski Trip</title>
+<link rel="stylesheet" type="text/css" href="ski.css">
+
+<style>
+	body {
+	  margin: 0;
+	  font-family: Arial, Helvetica, sans-serif;
+	}
+
+	.topnav {
+	  position: relative;
+	  overflow: hidden;
+	  background-color: #333;
+	}
+
+	.topnav a {
+	  float: left;
+	  color: #f2f2f2;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	  font-size: 17px;
+	}
+
+	.topnav a:hover {
+	  background-color: #ddd;
+	  color: black;
+	}
+
+	.topnav a.active {
+	  background-color: #04AA6D;
+	  color: white;
+	}
+
+	.topnav-centered a {
+	  float: none;
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	}
+
+	.topnav-right {
+	  float: right;
+	}
+
+	/* Responsive navigation menu (for mobile devices) */
+	@media screen and (max-width: 600px) {
+	  .topnav a, .topnav-right {
+	    float: none;
+	    display: block;
+	  }
+	  
+	  .topnav-centered a {
+	    position: relative;
+	    top: 0;
+	    left: 0;
+	    transform: none;
+	  }
+	}
+</style>
+
+</head>
+<body>
+
+	<header>
+
+		<ul>
+		  <li><a href="">Calendar</a></li>
+		  <li><a href="">Location</a></li>
+		  <li><a href="">Webcams</a></li>
+		</ul>
+
+		<div class="title">
+			<h1>Ski Trip 2026</h1>
+			<h2>Courchevel</h2>
+		</div>
+
+	</header>
+
+	<div class="break"> </div> <!--I'll put a small break in the page here-->
+
+	<main>
+		<p id="timer"></p>
+	</main>
+	
+<script>
+
+	// Sets the date we we go Skiing
+	var countDownDate = new Date("Mar 8, 2026 00:00:00").getTime();
+
+	// Update the count down every 1 second
+	var x = setInterval(function() {
+
+		// Get today's date and time
+  		var now = new Date().getTime();
+
+	    // Find the distance between now and the count down date
+		var distance = countDownDate - now;
+
+		// Time calculations for days, hours, minutes and seconds
+		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+		// Display the result in the element with id="demo"
+		document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+		+ minutes + "m " + seconds + "s ";
+
+		// If the count down is finished, write some text
+		if (distance < 0) {
+			clearInterval(x);
+			document.getElementById("timer").innerHTML = "We're off! Hope you're packed!";
+		}
+	}, 1000);
+</script>
+
+</body>
+</html>

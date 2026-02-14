@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">	
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" /> <!--This should be the image dad drew of the skiier-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="ski.css">
+<script src="scripts/countdownTimer.js"></script>
+<script src="scripts/mapAPICall.js"></script>
+<script src="scripts/getMap.js"></script>
+<script src="scripts/scrollFunction.js"></script>
+
+<title>Ski Trip</title>
+</head>
+<body>
+
+	<header id="navbar">
+
+		<ul id="nav_menu">
+		  <li><a id="nav_item1" href="#piste_map">Piste Map</a></li>
+		  <li><a id="nav_item2" href="#google_map">Location</a></li>
+		  <li><a id="nav_item3" href="https://courchevel.com/en/livecams/webcam/">Webcams</a></li>
+		</ul>
+
+		<div class="title">
+			<h1 id="h1_title">Ski Trip 2026</h1>
+			<h2 id="h2_title">Courchevel</h2>
+		</div>
+
+		<div class="menu" id="burger">
+			<a><i class="fa fa-bars"></i></a>
+		</div>
+
+		<div class="break" id="break"></div> <!--I'll put a small break in the page here-->
+
+	</header>
+
+	<main>
+		<div class="countdown">
+			<h3>Countdown:</h3>
+			<p id="timer">Loading...</p>
+		</div>
+
+		<div id="piste_map" class="piste">
+			<h3>Piste Map</h3>
+			<object width="900" height="530" type="application/pdf" data="objects/3-Vallees-Piste-Map.pdf">
+				<p>Les 3 Vallées Piste Map</p>
+			</object>
+		</div>
+
+		<div id="google_map" class="location">
+			<h3>Accommodation: Eagle's Nest</h3>
+		<gmp-map center="45.4192639,6.6517029" zoom="13" map-id="Location"></gmp-map>
+    	</div>
+	</main>
+	<footer>
+		<p>Ski Trip 2026</p>
+		<p>James Hillier</p>
+		<p>jamess.hillier@btinternet.com</p>
+	</footer>
+
+</body>
+</html>

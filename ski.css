@@ -1,0 +1,149 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: Tahoma, Arial;
+	background-color: rgba(116, 191, 255, 0.7);
+}
+
+header {
+	background-color: rgba(244, 250, 255, 1);
+	height: 150px;
+	width: 100%;
+	display: flex;
+	position: sticky;
+	top: 0;
+	transition: 0.4s;
+}
+
+ul {
+	list-style-type: none;
+	margin: 45px 20px;
+	height: 58px;
+	overflow: hidden;
+	background-color: rgba(117, 128, 138, 0.3);
+	display: flex;
+	border-radius: 10px;
+	transition: 0.4s;
+}
+
+ul li a {
+	display: block;
+	color: black;
+	font-weight: bold;
+	text-align: center;
+	margin: 1px;
+	padding: 18px 19px;
+	text-decoration: none;
+	border-radius: 10px;
+	transition: 0.4s;
+}
+
+ul li a:hover {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.title {
+	position: absolute;
+	text-align: center;
+	float: none;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -20%);
+}
+
+h1 {
+	color: rgba(228, 1, 52, 1);
+	font-size: 50px;
+	text-shadow: 3px 3px rgba(0, 0, 0, 0.8);
+	transition: 0.4s;
+}
+
+h2 {
+	color: rgba(61, 84, 176, 1);
+	font-size: 24px;
+	transition: 0.4s;
+}
+
+.menu {
+	color: rgba(228, 1, 52, 1);
+	text-shadow: 2px 2px rgba(0, 0, 0, 0.8);
+	position: absolute;
+	float: right;
+	margin: 10px;
+	right: 3%;
+	top: 25%;
+	font-size: 40px;
+	transition: 0.4s;
+}
+
+.break {
+	background-color: rgba(61, 84, 176, 1);
+	width: 100%;
+	height: 20px;
+	position: absolute;
+	top: 150px;
+	transition: 0.4s;
+}
+
+main {
+	background-image: url(images/test.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.countdown {
+	text-align: center;
+	font-size: 20px;
+	width: 800px;
+	margin: 100px 5px 10px 5px;
+	border-style: dashed;
+	border-radius: 10px;
+	background-color: rgba(117, 128, 138, 0.8);
+}
+
+#timer {
+	font-size: 60px;
+}
+
+.piste {
+	padding-top: 200px;
+	margin-top: 700px;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+.location {
+	margin-top: 900px;
+	margin-bottom: 100px;
+	color: black;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+gmp-map {
+	margin-top: 10px;
+    height: 400px;
+    width: 650px;
+  }
+
+ footer {
+ 	background-color: rgb(16, 18, 56);
+ 	text-align: center;
+ 	color: white;
+ 	padding: 20px;
+ }
