@@ -14,6 +14,8 @@ function scrollFunction() {
 	    document.getElementById("nav_item1").style.padding = "15px 19px"
 	    document.getElementById("nav_item2").style.padding = "15px 19px"
 	    document.getElementById("nav_item3").style.padding = "15px 19px"
+	    document.getElementById("logo").style.height = "80px"
+	    document.getElementById("logo").style.width = "70px"
 
 	  } else {
 	    document.getElementById("navbar").style.height = "150px";
@@ -29,5 +31,7 @@ function scrollFunction() {
 	    document.getElementById("nav_item1").style.padding = "18px 19px"
 	    document.getElementById("nav_item2").style.padding = "18px 19px"
 	    document.getElementById("nav_item3").style.padding = "18px 19px"
+	    document.getElementById("logo").style.height = "120px"
+	    document.getElementById("logo").style.width = "100px"
 	  }
 	}
