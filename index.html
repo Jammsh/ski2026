@@ -1,68 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" /> <!--This should be the image dad drew of the skiier-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="ski.css">
-<script src="scripts/countdownTimer.js"></script>
-<script src="scripts/mapAPICall.js"></script>
-<script src="scripts/getMap.js"></script>
-<script src="scripts/scrollFunction.js"></script>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="ski.css">
+		<script src="scripts/countdownTimer.js"></script>
+		<script src="scripts/mapAPICall.js"></script>
+		<script src="scripts/getMap.js"></script>
+		<script src="scripts/scrollFunction2.js"></script>
+		<script src="scripts/weatherWidget.js"></script>
+		<script src="scripts/openSidepanel.js"></script>
+		<title>Ski Trip</title>
+	</head>
+	<body>
+		<header id="navbar">
 
-<title>Ski Trip</title>
-</head>
-<body>
+			<ul id="nav_menu">
+			  <li><a id="nav_item1" href="#piste_map">Piste Map</a></li>
+			  <li><a id="nav_item2" href="#google_map">Location</a></li>
+			  <li><a id="nav_item3" href="https://courchevel.com/en/livecams/webcam/">Webcams</a></li>
+			</ul>
 
-	<header id="navbar">
+			<img class="logo" id="logo" src="images/favicon.png" alt="Ski Guy">
 
-		<ul id="nav_menu">
-		  <li><a id="nav_item1" href="#piste_map">Piste Map</a></li>
-		  <li><a id="nav_item2" href="#google_map">Location</a></li>
-		  <li><a id="nav_item3" href="https://courchevel.com/en/livecams/webcam/">Webcams</a></li>
-		</ul>
+			<div class="title">
+				<h1 id="h1_title">Ski Trip 2026</h1>
+				<h2 id="h2_title">Courchevel</h2>
+			</div>
 
-		<img id="logo" src="images/favicon.png" alt="Ski Guy">
+			<div class="menu" id="burger" onclick="openNav()">
+				<a><i class="fa fa-bars"></i></a>
+			</div>
 
-		<div class="title">
-			<h1 id="h1_title">Ski Trip 2026</h1>
-			<h2 id="h2_title">Courchevel</h2>
-		</div>
+			<div id="sidepanel" class="sidepanel">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a style="margin-top: 30px;" href="https://courchevel.com/en/livecams/webcam/">Webcams</a>
+				<a href="https://www.onthesnow.co.uk/northern-alps/courchevel/skireport">Weather</a>
+				<a href="recommended_apps.html">Recommended Apps</a>
+				<a href="https://courchevel.com/en/">Official Courchevel Website</a>
+			</div>
 
-		<div class="menu" id="burger">
-			<a><i class="fa fa-bars"></i></a>
-		</div>
+			<div class="break" id="break"></div>
 
-		<div class="break" id="break"></div> <!--I'll put a small break in the page here-->
+		</header>
 
-	</header>
+		<main>
+			<button onclick="topFunction()" id="goToTopBtn" title="Scroll to Top">Back to Top</button>
 
-	<main>
-		<div class="countdown">
-			<h3>Countdown:</h3>
-			<p id="timer">Loading...</p>
-		</div>
+			<h3 style="margin-top: 100px;">Countdown to Flight</h3>
+			<div class="countdown">
+				<div class="time-section" id="days">
+					<div class="time-group">
+						<div class="time-segment">
+							<div class="segment-display">
+								<div class="segment-display-top">0</div>
+								<div class="segment-display-bottom">0</div>
+								<div class="segment-overlay">
+									<div class="segment-overlay-top">0</div>
+								<div class="segment-overlay-bottom">0</div>
+								</div>
+							</div>
+						</div>
+						<div class="time-segment">
+							<div class="segment-display">
+								<div class="segment-display-top">0</div>
+								<div class="segment-display-bottom">0</div>
+								<div class="segment-overlay">
+									<div class="segment-overlay-top">0</div>
+								<div class="segment-overlay-bottom">0</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<p>Days</p>
+				</div>
+				<div class="time-section" id="hours">
+					<div class="time-group">
+						<div class="time-segment">
+							<div class="segment-display">
+								<div class="segment-display-top">0</div>
+								<div class="segment-display-bottom">0</div>
+								<div class="segment-overlay">
+									<div class="segment-overlay-top">0</div>
+								<div class="segment-overlay-bottom">0</div>
+								</div>
+							</div>
+						</div>
+						<div class="time-segment">
+							<div class="segment-display">
+								<div class="segment-display-top">0</div>
+								<div class="segment-display-bottom">0</div>
+								<div class="segment-overlay">
+									<div class="segment-overlay-top">0</div>
+								<div class="segment-overlay-bottom">0</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<p>Hours</p>
+				</div>
+				<div class="time-section" id="minutes">
+					<div class="time-group">
+						<div class="time-segment">
+							<div class="segment-display">
+								<div class="segment-display-top">0</div>
+								<div class="segment-display-bottom">0</div>
+								<div class="segment-overlay">
+									<div class="segment-overlay-top">0</div>
+								<div class="segment-overlay-bottom">0</div>
+								</div>
+							</div>
+						</div>
+						<div class="time-segment">
+							<div class="segment-display">
+								<div class="segment-display-top">0</div>
+								<div class="segment-display-bottom">0</div>
+								<div class="segment-overlay">
+									<div class="segment-overlay-top">0</div>
+								<div class="segment-overlay-bottom">0</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<p>Minutes</p>
+				</div>
+				<div class="time-section" id="seconds">
+					<div class="time-group">
+						<div class="time-segment">
+							<div class="segment-display">
+								<div class="segment-display-top">0</div>
+								<div class="segment-display-bottom">0</div>
+								<div class="segment-overlay">
+									<div class="segment-overlay-top">0</div>
+								<div class="segment-overlay-bottom">0</div>
+								</div>
+							</div>
+						</div>
+						<div class="time-segment">
+							<div class="segment-display">
+								<div class="segment-display-top">0</div>
+								<div class="segment-display-bottom">0</div>
+								<div class="segment-overlay">
+									<div class="segment-overlay-top">0</div>
+								<div class="segment-overlay-bottom">0</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<p>Seconds</p>
+				</div>
+			</div>
 
-		<div id="piste_map" class="piste">
-			<h3>Piste Map</h3>
-			<object width="900" height="530" type="application/pdf" data="objects/3-Vallees-Piste-Map.pdf">
-				<p>Les 3 Vallées Piste Map</p>
-			</object>
-		</div>
+			<h3>Weather Forcast</h3>
+			<a class="weatherwidget-io" href="https://forecast7.com/en/45d436d62/courchevel/" data-label_1="COURCHEVEL" data-label_2="WEATHER" data-theme="weather_one">COURCHEVEL WEATHER</a>
 
-		<div id="google_map" class="location">
+			<h3 id="piste_map">Piste Map</h3>
+			<div class="piste">
+				<object type="application/pdf" data="objects/3-Vallees-Piste-Map.pdf">
+					<p>Les 3 Vallées Piste Map</p>
+				</object>
+			</div>
+			<button class="download"><a href="objects/3-Vallees-Piste-Map.pdf" download><i class="fa fa-download"></i> Download Map</a></button>
+
 			<h3>Accommodation: Eagle's Nest</h3>
-		<gmp-map center="45.4192639,6.6517029" zoom="13" map-id="Location"></gmp-map>
-    	</div>
-	</main>
-	<footer>
-		<p>Ski Trip 2026</p>
-		<p>James Hillier</p>
-		<p>jamess.hillier@btinternet.com</p>
-	</footer>
+			<div id="google_map" class="location">
+				<gmp-map center="45.4192639,6.6517029" zoom="13" map-id="Location"></gmp-map>
+	    	</div>
+		</main>
+		<footer>
+			<p>Ski Trip 2026</p>
+			<p>James Hillier</p>
+			<p>jamess.hillier@btinternet.com</p>
+		</footer>
 
-</body>
-
+	</body>
 </html>
-
