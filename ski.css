@@ -421,7 +421,7 @@ gmp-map {
 	}
 
 	.countdown {
-		gap: 16px;
+		gap: 10px;
 	}
 
 	.time-section {
@@ -429,39 +429,40 @@ gmp-map {
 	}
 
 	.time-group {
-		gap: 6px;
+		gap: 4px;
 	}
 
 	.time-segment {
 		font-size: 50px;
-		width: 50px;
+		width: 40px;
 	}
 
 	.segment-overlay {
-		width: 50px;
+		width: 40px;
 		perspective: 300px;
 	}
 
 	.weatherwidget-io {
-		width: 400px;
+		width: 350px;
 	}
 
 	.piste object {
-		width: 420px;
-		height: 300px;
+		width: 350px;
+		height: 190px;
 	}
 
 	gmp-map {
-		width: 400px;
+		width: 350px;
 		height: 210px;
 	}
 
 	h3 {
+		text-align: center;
 		font-size: 30px;
 	}
 
 	.appSection {
-		height: 400px;
+		height: 550px;
 	}
 
 	.appSection img {
