@@ -291,6 +291,11 @@ main {
 	}
 }
 
+.cam {
+	width: 700px;
+	height: 400px;
+}
+
 .weatherwidget-io {
 	width: 650px;
 	margin-top: 5px;
@@ -337,7 +342,7 @@ h3 {
 	display: inline-flex;
 	margin-top: 100px;
 	width: 100%;
-	height: 280px;
+	height: fit-content;
 	padding: 30px;
 }
 
@@ -352,6 +357,7 @@ h3 {
 	padding: 20px;
 	font-family: Helvetica;
 	width: 60%;
+	height: fit-content;
 }
 
 .appSection div h4 {
@@ -442,6 +448,11 @@ gmp-map {
 		perspective: 300px;
 	}
 
+	.cam {
+		width: 350px;
+		height: 200px;
+	}
+
 	.weatherwidget-io {
 		width: 350px;
 	}
@@ -459,10 +470,6 @@ gmp-map {
 	h3 {
 		text-align: center;
 		font-size: 30px;
-	}
-
-	.appSection {
-		height: 550px;
 	}
 
 	.appSection img {
