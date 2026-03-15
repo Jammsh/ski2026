@@ -1,4 +1,4 @@
-const targetDate = '2026-03-08T19:30:00'; //2026-03-23T00:50:00
+const targetDate = '2027-03-08T00:00:00'; //2026-03-23T00:50:00
 
 function getTimeSegmentElements(segmentElement) { //time-segmnet
 	const segmentDisplay = segmentElement.querySelector('.segment-display');
